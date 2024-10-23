@@ -4,32 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anash's Portfolio - Home</title>
+    <title>Anash's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Intro</a></li>
-            <li><a href="projects.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <header class="hero">
-        <h1>Syed Anas Hussain</h1>
-        <p>Hi! I'm a Data Scientist with a passion for solving real-world problems using data.</p>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1 id="hero-title">Syed Anas Hussain</h1>
+        <p id="hero-description">Hi! I'm a Data Scientist with a passion for solving real-world problems using data.</p>
         <div class="social-icons">
             <a href="#"><img src="images/github-icon.png" alt="GitHub"></a>
             <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
         </div>
         <div class="cta-buttons">
-            <button class="subscribe-btn">Subscribe</button>
             <button class="contact-btn">Contact</button>
         </div>
-    </header>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <img src="images/profile.jpg" alt="Anash">
+            <div class="bio">
+                <h2>Hi, I'm Anas</h2>
+                <p>I specialize in helping companies and researchers analyze and visualize their datasets...</p>
+                <div class="links">
+                    <a href="#">Twitter</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h2>Power BI Dashboard for Business Insights</h2>
+                <img src="images/powerbi-dashboard.png" alt="Power BI Dashboard Screenshot">
+                <p>Developed a Power BI dashboard to provide insights into sales performance, inventory management, and regional trends.</p>
+                <button class="learn-more-btn" onclick="openModal('modal1')">Learn More</button>
+            </div>
+
+            <!-- Modal for Project Details -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Power BI Dashboard</h2>
+                    <p>Detailed information about the Power BI project...</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h2>ETL Pipeline for Multisource Data Integration</h2>
+                <p>Built an ETL pipeline to integrate data from multiple sources (API, database, and CSV files) for unified analysis.</p>
+                <a href="notebooks/etl_pipeline.html" target="_blank">View Full Notebook</a>
+            </div>
+            <div class="project-item">
+                <h2>Customer Churn Analysis with PySpark</h2>
+                <p>Analyzed customer churn behavior and built a predictive model using PySpark.</p>
+                <a href="notebooks/churn_analysis.html" target="_blank">View Full Notebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to contact me for any questions...</p>
+        <div class="contact-buttons">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="mailto:example@example.com">Mail</a>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?..."></iframe>
+        </div>
+    </section>
+
+    <!-- Link to your JavaScript file -->
     <script src="js/script.js"></script>
 </body>
 

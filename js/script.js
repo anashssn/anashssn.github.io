@@ -31,12 +31,12 @@ const typewriteText = (element, text, speed) => {
     type();
 };
 
-window.onload = () => {
+window.addEventListener('load', () => {
     typewriteText(document.getElementById("hero-title"), "Syed Anas Hussain", 100);
     setTimeout(() => {
         typewriteText(document.getElementById("hero-description"), "Hi! I'm a Data Scientist with a passion for solving real-world problems using data.", 50);
     }, 2000);
-};
+});
 
 // Modal Popups for Project Details
 function openModal(modalId) {
@@ -47,28 +47,16 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
 
-window.onclick = function (event) {
+window.addEventListener('click', function (event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
-};
-
-// Carousel Functionality for Project Showcase
-let currentIndex = 0;
-
-document.querySelector('.next').addEventListener('click', () => {
-    const track = document.querySelector('.carousel-track');
-    currentIndex = (currentIndex + 1) % track.children.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-    const track = document.querySelector('.carousel-track');
-    currentIndex = (currentIndex - 1 + track.children.length) % track.children.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
 
 // Remove Loading Spinner After Page Load
-window.onload = function () {
-    document.getElementById('loading-spinner').style.display = 'none';
-};
+window.addEventListener('load', function () {
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+        spinner.style.display = 'none';
+    }
+});
