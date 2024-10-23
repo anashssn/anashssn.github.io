@@ -34,7 +34,7 @@ const typewriteText = (element, text, speed) => {
 window.addEventListener('load', () => {
     typewriteText(document.getElementById("hero-title"), "Syed Anas Hussain", 100);
     setTimeout(() => {
-        typewriteText(document.getElementById("hero-description"), "Hi! I'm a Data Scientist with a passion for solving real-world problems using data.", 50);
+        typewriteText(document.getElementById("hero-description"), "Fueled by a deep love for data, I transform raw numbers into meaningful insights that drive impactful change. My passion lies in exploring complex datasets, uncovering hidden trends, and using data to solve real-world challenges.", 50);
     }, 2000);
 });
 
